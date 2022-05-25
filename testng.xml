@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Regression Test suite">
+   <!-- <test thread-count="2" verbose="2" preserve-order="true" name="E:/ITI/Automation/Norhan/Vtask">-->
+    <test thread-count="1" preserve-order="true" name="Vtask">
+        <classes>
+            <class name="TestPages.UserRegistration">
+                <methods><include name="userCanRegister"/></methods>
+            </class>
+        </classes>
+    </test>
+</suite>
