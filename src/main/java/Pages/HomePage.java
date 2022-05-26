@@ -1,6 +1,7 @@
 package Pages;
 
 import UIActions.BasicActions;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -12,9 +13,9 @@ public class HomePage extends BasicActions {//extends Browser
       // this.driver= driver;
    }
    // BasicActions actions ;
-    @FindBy(name="q")//css = "input.gLFyf.gsfi"
-    WebElement GoogleSearch;
-   //  WebElement GoogleSearch = driver.findElement(By.name("q"));
+    /*@FindBy(name="q")//css = "input.gLFyf.gsfi"
+    WebElement GoogleSearch;*/
+     WebElement GoogleSearch = this.getDrv().findElement(By.name("q"));
     @FindBy(id="pnnext")
     WebElement NextPageLink;
     public void searchInGoogle(String SearchKey) {

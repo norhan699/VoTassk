@@ -25,7 +25,7 @@ public class BasicActions extends Browser {
         inputField.sendKeys(text, Keys.ENTER);
     }
     public void scrollDown(){
-        JavascriptExecutor js = (JavascriptExecutor) driver;//this.
-        js.executeScript("window.scrollTo(0, document.body.scrollHeight)");
+      //  JavascriptExecutor js = (JavascriptExecutor) driver;//this.
+       // js.executeScript("window.scrollTo(0, document.body.scrollHeight)");
     }
 }

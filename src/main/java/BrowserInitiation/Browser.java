@@ -4,23 +4,37 @@ package BrowserInitiation;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
+import java.util.Objects;
+
 public class Browser {
-    final String DRIVER_PATH=System.getProperty("user.dir")+"/Drivers/chromedriver.exe";
-    public static WebDriver driver;
+    final static String DRIVER_PATH=System.getProperty("user.dir")+"/Drivers/chromedriver.exe";
+    private static WebDriver driver;//kan public
    /* public Browser(WebDriver driver) {
         this.driver=driver;
     }*/
-    public void setDriver() {
-
-        System.setProperty("webdriver.chrome.driver",DRIVER_PATH);
-        driver = new ChromeDriver();//chromeOptions
-        /* ChromeOptions chromeOption = new ChromeOptions();
-      / WebDriverManager.chromedriver().setup();*/
+    private static ThreadLocal<WebDriver> drv = new ThreadLocal<>();
+    public static WebDriver getDrv(){
+        return drv.get();
+    }
+    public static void setDrv(WebDriver driverRef){
+         drv.set(driverRef);
+    }
+    public  void unloadDrv(){
+        drv.remove();
+    }
+    public static void setDriver() {
+        if(Objects.isNull(driver)) {
+            System.setProperty("webdriver.chrome.driver", DRIVER_PATH);
+            driver = new ChromeDriver();
+            setDrv(driver);
+        }
     }
     public void openWebsite(String websiteUrl){
-        driver.get(websiteUrl);
+        getDrv().get(websiteUrl);
+       // driver.get(websiteUrl);
     }
     public void tearDownDriver(){
-        driver.quit();
+        getDrv().quit();
+        //driver.quit();
     }
 }
