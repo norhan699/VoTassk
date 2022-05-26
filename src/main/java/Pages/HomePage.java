@@ -15,6 +15,8 @@ public class HomePage extends BasicActions {//extends Browser
     @FindBy(name="q")//css = "input.gLFyf.gsfi"
     WebElement GoogleSearch;
    //  WebElement GoogleSearch = driver.findElement(By.name("q"));
+    @FindBy(id="pnnext")
+    WebElement NextPageLink;
     public void searchInGoogle(String SearchKey) {
       //  actions= new BasicActions(driver);
        // System.out.println(GoogleSearch.getText()+"mmmmmmmmmmmmmmmmm");
@@ -22,7 +24,10 @@ public class HomePage extends BasicActions {//extends Browser
        // GoogleSearch.sendKeys(SearchKey, Keys.ENTER);
         EnterTextInInputField(GoogleSearch,SearchKey);
     }
-    public void ScrollDownTillEndOfPage(){
+    public void scrollDownTillEndOfPage(){
         scrollDown();
+    }
+    public void NavigateToNextpage(){
+        clickLink(NextPageLink);
     }
 }

@@ -4,8 +4,11 @@
    <!-- <test thread-count="2" verbose="2" preserve-order="true" name="E:/ITI/Automation/Norhan/Vtask">-->
     <test thread-count="1" preserve-order="true" name="Vtask">
         <classes>
-            <class name="TestPages.UserRegistration">
-                <methods><include name="userCanRegister"/></methods>
+            <class name="TestPages.SearchResults">
+               <!-- <methods>
+                    <include name="userSearchInGoogle"/>
+                    <include name="userNavigateToNextSearchPage"/>
+                </methods>-->
             </class>
         </classes>
     </test>
