@@ -13,9 +13,9 @@ public class HomePage extends BasicActions {//extends Browser
       // this.driver= driver;
    }
    // BasicActions actions ;
-    /*@FindBy(name="q")//css = "input.gLFyf.gsfi"
-    WebElement GoogleSearch;*/
-     WebElement GoogleSearch = this.getDrv().findElement(By.name("q"));
+    @FindBy(name="q")//css = "input.gLFyf.gsfi"
+    WebElement GoogleSearch;
+     /*WebElement GoogleSearch = this.getDrv().findElement(By.name("q"));*/
     @FindBy(id="pnnext")
     WebElement NextPageLink;
     public void searchInGoogle(String SearchKey) {

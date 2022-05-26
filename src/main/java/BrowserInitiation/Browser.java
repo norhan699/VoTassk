@@ -12,17 +12,19 @@ public class Browser {
    /* public Browser(WebDriver driver) {
         this.driver=driver;
     }*/
+    //leh hna lw m5lthomsh static msh bi run el parallel execution??/??????????
     private static ThreadLocal<WebDriver> drv = new ThreadLocal<>();
-    public static WebDriver getDrv(){
+    public static WebDriver getDrv(){//
+
         return drv.get();
     }
-    public static void setDrv(WebDriver driverRef){
+    public static void setDrv(WebDriver driverRef){//
          drv.set(driverRef);
     }
     public  void unloadDrv(){
         drv.remove();
     }
-    public static void setDriver() {
+    public static void setDriver() {//
         if(Objects.isNull(driver)) {
             System.setProperty("webdriver.chrome.driver", DRIVER_PATH);
             driver = new ChromeDriver();
