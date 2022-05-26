@@ -6,7 +6,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 public class Browser {
     final String DRIVER_PATH=System.getProperty("user.dir")+"/Drivers/chromedriver.exe";
-    public  WebDriver driver;//static
+    public static WebDriver driver;
    /* public Browser(WebDriver driver) {
         this.driver=driver;
     }*/

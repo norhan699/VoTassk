@@ -7,7 +7,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 
-public class BasicActions extends Browser {//
+public class BasicActions extends Browser {
     // Browser browser ;
    // WebDriver driver;
     public BasicActions(WebDriver driver) {
@@ -25,7 +25,7 @@ public class BasicActions extends Browser {//
         inputField.sendKeys(text, Keys.ENTER);
     }
     public void scrollDown(){
-        JavascriptExecutor js = (JavascriptExecutor) this.driver;
+        JavascriptExecutor js = (JavascriptExecutor) driver;//this.
         js.executeScript("window.scrollTo(0, document.body.scrollHeight)");
     }
 }

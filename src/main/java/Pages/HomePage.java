@@ -6,7 +6,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
 public class HomePage extends BasicActions {//extends Browser
-    WebDriver driver;
+   // WebDriver driver;
    public HomePage(WebDriver driver) {
         super(driver);
       // this.driver= driver;

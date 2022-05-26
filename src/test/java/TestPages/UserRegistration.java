@@ -10,26 +10,25 @@ import org.testng.annotations.Test;
 public class UserRegistration  {//extends Browser
     HomePage home;
     Browser browser;
-  //  WebDriver driver;
-    @BeforeTest
+    @BeforeClass
     public void setUpBrowser(){
         browser= new Browser();
         browser.setDriver();
         browser.openWebsite("https://www.google.com/");
     }
-    @Test(priority = 1)
+    @Test
     public void userCanRegister(){
-        browser.setDriver();
+       // browser.setDriver();
         home=new HomePage(browser.driver);
         home.searchInGoogle("Vodafone");
         home.ScrollDownTillEndOfPage();
     }
-    @Test(priority = 2)
+   /* @Test(priority = 2)
     public void userCanRegister2(){
 
         home.searchInGoogle("Vodafone");
        // home.ScrollDownTillEndOfPage();
-    }
+    }*/
     @AfterClass
     public void closeBrowser(){
        // browser.tearDownDriver();
