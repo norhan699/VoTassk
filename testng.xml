@@ -5,16 +5,10 @@
     <test thread-count="2" name="Vtask" parallel="methods" >
         <classes>
             <class name="TestPages.SearchResults"/>
-                <!-- <methods>
+            <class name="TestPages.NextPage"/>
+            <!-- <methods>
                     <include name="userSearchInGoogle"/>
                    <include name="userNavigateToNextSearchPage"/>
-                </methods>
-            </class>-->
-            <class name="TestPages.NextPage"/>
-
-              <!--  <methods>
-
-                    <include name="userNavigateToNextSearchPage"/>
                 </methods>
             </class>-->
         </classes>

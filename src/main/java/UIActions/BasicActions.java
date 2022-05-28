@@ -1,6 +1,7 @@
 package UIActions;
 
 import BrowserInitiation.Browser;
+import BrowserInitiation.DriverManager;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
@@ -25,7 +26,7 @@ public class BasicActions extends Browser {
         inputField.sendKeys(text, Keys.ENTER);
     }
     public void scrollDown(){
-      //  JavascriptExecutor js = (JavascriptExecutor) driver;//this.
-       // js.executeScript("window.scrollTo(0, document.body.scrollHeight)");
+        JavascriptExecutor js = (JavascriptExecutor) DriverManager.getDrv();//this.
+        js.executeScript("window.scrollTo(0, document.body.scrollHeight)");
     }
 }

@@ -18,6 +18,9 @@ public class HomePage extends BasicActions {//extends Browser
      /*WebElement GoogleSearch = this.getDrv().findElement(By.name("q"));*/
     @FindBy(id="pnnext")
     WebElement NextPageLink;
+    @FindBy(css = "h2.qrShPb.kno-ecr-pt.PZPZlf.q8U8x>span")//"#mh_tsuid39.h2"
+    // div[@id='mh_tsuid39']or//*[@id='mh_tsuid39']/div/div/div[2]/h2/span
+    WebElement VodafoneLogo;// i use it in assertion
     public void searchInGoogle(String SearchKey) {
       //  actions= new BasicActions(driver);
        // System.out.println(GoogleSearch.getText()+"mmmmmmmmmmmmmmmmm");
@@ -30,5 +33,11 @@ public class HomePage extends BasicActions {//extends Browser
     }
     public void NavigateToNextpage(){
         clickLink(NextPageLink);
+    }
+    public WebElement getVodafonelogo(){
+        return VodafoneLogo;
+    }
+    public String getVodafonelogoText(){
+        return VodafoneLogo.getText();
     }
 }
