@@ -24,7 +24,7 @@ public class Browser {
             DriverManager.setDrv(new ChromeDriver());//driver
        // }
     }
-    public void openWebsite() throws IOException {
+    public void openWebsite() throws Exception {
         DriverManager.getDrv().get(ReadPropertiesFile.getValue("url"));
         // driver.get(websiteUrl);
     }
