@@ -1,5 +1,7 @@
 package Utils;
 
+import Constants.Constantpaths;
+
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.HashMap;
@@ -11,7 +13,7 @@ public final class ReadPropertiesFile {
     public static String getValue(String key) throws Exception {
         //String value="";
         Properties property = new Properties();
-        FileInputStream filePath =new FileInputStream(System.getProperty("user.dir")+"/src/main/resources/properties");
+        FileInputStream filePath =new FileInputStream(Constantpaths.getPROPERTIESFILEPATH());
         property.load(filePath);
        // value = property.getProperty(key);=da b2a bdalo CONFIGMAP.get(key);
         for(Map.Entry<Object,Object> entry: property.entrySet()){

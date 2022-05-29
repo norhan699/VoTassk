@@ -1,6 +1,7 @@
 package BrowserInitiation;
 
 
+import Constants.Constantpaths;
 import Utils.ReadPropertiesFile;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -19,7 +20,7 @@ public class Browser {
     }*/
     public static void setDriver() {//
        // if(Objects.isNull(driver)) {
-            System.setProperty("webdriver.chrome.driver", DRIVER_PATH);
+            System.setProperty("webdriver.chrome.driver", Constantpaths.getCHROMEPATH());
             //driver = new ChromeDriver();
             DriverManager.setDrv(new ChromeDriver());//driver
        // }
