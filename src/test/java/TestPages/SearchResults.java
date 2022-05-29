@@ -20,7 +20,6 @@ public final class SearchResults extends BaseTest {//final:because i don't want 
         System.out.println(DriverManager.getDrv().getTitle());//getDrv b null !!!!!!!!!!!!-->browser.getDrv()
         home=new HomePage(DriverManager.getDrv());//browser.driver-->browser.getDrv()
         home.searchInGoogle("Vodafone");
-       // Assert.assertEquals(home.getVodafonelogo(),"Vodafone Egypt");
         //WebDriverWait wait = new WebDriverWait(driver,30);
        // wait.until(ExpectedConditions.visibilityOfElementLocated(BY.home.getVodafonelogo()));
        // browser.getDrv().manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
