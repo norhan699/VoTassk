@@ -37,13 +37,10 @@ public class HomePage extends BasicActions {//extends Browser
     public void NavigateToNextpage(){
         clickLink(NextPageLink);
     }
-    public String getVodafonelogo(){
+   public String getVodafonelogo(){
         return "h2.qrShPb.kno-ecr-pt.PZPZlf.q8U8x>span";
     }
     public String getVodafonelogoText(){
-        return VodafoneLogo.getText();
-    }
-    public String getSearchResultTtle(){
         return VodafoneLogo.getText();
     }
     public List<WebElement> getListOfLinks(){

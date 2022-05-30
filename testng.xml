@@ -5,7 +5,7 @@
     <test thread-count="2" name="Vtask" parallel="methods" >
         <classes>
             <class name="TestPages.SearchResults"/>
-            <class name="TestPages.NextPage"/>
+         <!--   <class name="TestPages.NextPage"/>-->
             <!-- <methods>
                     <include name="userSearchInGoogle"/>
                    <include name="userNavigateToNextSearchPage"/>
