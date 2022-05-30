@@ -1,10 +1,11 @@
 package Pages;
 
 import UIActions.BasicActions;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+
+import java.util.List;
 
 public class HomePage extends BasicActions {//extends Browser
    // WebDriver driver;
@@ -21,6 +22,8 @@ public class HomePage extends BasicActions {//extends Browser
     @FindBy(css = "h2.qrShPb.kno-ecr-pt.PZPZlf.q8U8x>span")//"#mh_tsuid39.h2"
     // div[@id='mh_tsuid39']or//*[@id='mh_tsuid39']/div/div/div[2]/h2/span
     WebElement VodafoneLogo;// i use it in assertion
+    @FindBy(xpath = "//h3[@class='LC20lb MBeuO DKV0Md']")
+    List<WebElement> LinksList;
     public void searchInGoogle(String SearchKey) {
       //  actions= new BasicActions(driver);
        // System.out.println(GoogleSearch.getText()+"mmmmmmmmmmmmmmmmm");
@@ -39,5 +42,11 @@ public class HomePage extends BasicActions {//extends Browser
     }
     public String getVodafonelogoText(){
         return VodafoneLogo.getText();
+    }
+    public String getSearchResultTtle(){
+        return VodafoneLogo.getText();
+    }
+    public List<WebElement> getListOfLinks(){
+        return LinksList;
     }
 }
