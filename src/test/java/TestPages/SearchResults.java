@@ -36,7 +36,7 @@ public final class SearchResults extends BaseTest {//final:because i don't want 
        /* Assert.assertTrue(links.size()<=13);
         Assert.assertTrue(links.size()>=10);*/
         home.scrollDownTillEndOfPage();
-       // home.NavigateToNextpage();
+        home.NavigateToNextpage();
     }
 
    /*@Test(priority = 2)
