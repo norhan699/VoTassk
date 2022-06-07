@@ -27,8 +27,8 @@ public class Browser {
        // }
     }
     public void openWebsite() throws Exception {
-        DriverManager.getDrv().get(ReadJsonFile.get("url"));
-       // DriverManager.getDrv().get(ReadPropertiesFile.getValue("url"));
+       // DriverManager.getDrv().get(ReadJsonFile.get("url"));
+        DriverManager.getDrv().get(ReadPropertiesFile.getValue("url"));
         // driver.get(websiteUrl);
     }
     /*public void openWebsite(String websiteUrl){
