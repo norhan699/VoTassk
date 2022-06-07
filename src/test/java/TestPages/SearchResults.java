@@ -13,13 +13,13 @@ import java.time.Duration;
 import java.util.List;
 
 public final class SearchResults extends BaseTest {//final:because i don't want anyone to extend this class because it is a test case
-    private SearchResults(){
+    private SearchResults(){//private because i don't want anyone to make an object from this test
 
     }
     HomePage home;
     @Test(priority = 1)
     public void userSearchInGoogle(){
-        System.out.println(DriverManager.getDrv().getTitle());//getDrv b null !!!!!!!!!!!!-->browser.getDrv()
+       // System.out.println(DriverManager.getDrv().getTitle());//getDrv b null !!!!!!!!!!!!-->browser.getDrv()
         home=new HomePage(DriverManager.getDrv());//browser.driver-->browser.getDrv()
         home.searchInGoogle("Vodafone");
         WebDriverWait wait = new WebDriverWait(DriverManager.getDrv(),Duration.ofSeconds(10));
@@ -32,7 +32,7 @@ public final class SearchResults extends BaseTest {//final:because i don't want 
        // Assert.assertTrue(title.toLowerCase().contains("google search"));
         Assert.assertTrue(home.getVodafonelogoText().contains("Vodafone"));
         List<WebElement> links = home.getListOfLinks();
-        Assertions.assertThat(links).hasSizeBetween(10,13);
+        Assertions.assertThat(links).hasSizeBetween(7,13);
        /* Assert.assertTrue(links.size()<=13);
         Assert.assertTrue(links.size()>=10);*/
         home.scrollDownTillEndOfPage();

@@ -17,7 +17,7 @@ public final class ReadPropertiesFile {
         property.load(filePath);
        // value = property.getProperty(key);=da b2a bdalo CONFIGMAP.get(key);
         for(Map.Entry<Object,Object> entry: property.entrySet()){
-            CONFIGMAP.put(String.valueOf(entry.getKey()),String.valueOf(entry.getValue()));
+            CONFIGMAP.put(String.valueOf(entry.getKey()),String.valueOf(entry.getValue()).trim());//remove any spaces before or after the value
         }
         if(Objects.isNull(CONFIGMAP.get(key))){//=value==null//Objects.isNull(value)
             throw new Exception("property name "+key+" is not found, please check it in resources.properties file");
