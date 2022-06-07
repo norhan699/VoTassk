@@ -4,7 +4,7 @@ public class Constantpaths {
 
 
     private static final String CHROMEPATH=System.getProperty("user.dir")+"/Drivers/chromedriver.exe";
-    private static final String EDGEPATH=System.getProperty("user.dir")+"/Drivers/msedgedriver.exe";
+    private static final String EDGEPATH=System.getProperty("user.dir")+"/Drivers/edgedriver.exe";
     private static final String IEPATH=System.getProperty("user.dir")+"/Drivers/IEDriverServer.exe";
     private static final String PROPERTIESFILEPATH =System.getProperty("user.dir")+"/src/main/resources/properties";
     private static final String JSONFILEPATH =System.getProperty("user.dir")+"/src/main/resources/json.json";

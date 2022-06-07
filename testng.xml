@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
 <suite name="Regression Test suite">
+    <parameter name="browser" value="chrome"/>
    <!-- <test thread-count="2" verbose="2" preserve-order="true" name="E:/ITI/Automation/Norhan/Vtask">-->
     <test thread-count="2" name="Vtask" parallel="methods" >
         <classes>
             <class name="TestPages.SearchResults"/>
-         <!--   <class name="TestPages.NextPage"/>-->
+
+           <class name="TestPages.NextPage"/>
             <!-- <methods>
                     <include name="userSearchInGoogle"/>
                    <include name="userNavigateToNextSearchPage"/>
